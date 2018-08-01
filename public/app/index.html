@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+<!--
+	Astral by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Astral by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper-->
+			<div id="wrapper">
+
+				<!-- Nav -->
+					<nav id="nav">
+						<a href="#" class="icon fa-home"><span>Home</span></a>
+						<a href="#work" class="icon fa-folder"><span>Work</span></a>
+						<a href="#contact" class="icon fa-envelope"><span>Contact</span></a>
+						<a href="https://twitter.com/ajlkn" class="icon fa-twitter"><span>Twitter</span></a>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Me -->
+							<article id="home" class="panel intro">
+								<header>
+									<h1>geoblock</h1>
+									<p><p id="demo"></p></p>
+
+
+
+
+									<div id="location"> <button onclick="getLocation()">get your coordinates</button>
+
+								</header>
+								<a href="#work" class="jumplink pic">
+									<span class="arrow icon fa-chevron-right"><span>See my work</span></span>
+									<img src="images/me.jpg" alt="" />
+								</a>
+							</article>
+
+
+
+
+						<!-- Work -->
+							<article id="work" class="panel intro">
+
+								<header>
+									<h1>Jane Doe</h1>
+									<p>Senior Astral Projectionist</p>
+
+									<p>Click the button to get your coordinates.</p>
+
+									<button onclick="getLocation()">Try It</button>
+
+								</header>
+								<a href="#work" class="jumplink pic">
+									<span class="arrow icon fa-chevron-right"><span>See my work</span></span>
+									<img src="images/me.jpg" alt="" />
+								</a>
+							</article>
+
+
+						<!-- Contact -->
+							<article id="contact" class="panel">
+								<header>
+									<h2>title details</h2>
+								</header>
+								<form action="#" method="post">
+									<div>
+										<div class="row">
+											<div class="col-6 col-12-medium">
+												<input type="text" name="name" placeholder="mary " />
+											</div>
+											<div class="col-6 col-12-medium">
+												<input type="text" name="email" placeholder="anyone@gmail.com" />
+											</div>
+											<div class="col-6 col-12-medium">
+												<input type="text" name="cell" placeholder="+2547333333" />
+											</div>
+
+											<div class="col-6 col-12-medium">
+												<input type="text" name="title number" placeholder="nairobi/juja/9078561" />
+											</div>
+
+											<div class="col-6 col-12-medium">
+												<input type="text" name="approximate area" placeholder="5 ha" />
+											</div>
+
+											<div class="col-12">
+												<input type="submit" value="Send Message" />
+											</div>
+										</div>
+									</div>
+								</form>
+							</article>
+
+					</div>
+
+				<!-- Footer -->
+					<div id="footer">
+						<ul class="copyright">
+							<li>&copy; Untitled.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+	<script>
+	var x = document.getElementById("location");
+	function getLocation() {
+	    if (navigator.geolocation) {
+	        navigator.geolocation.watchPosition(showPosition);
+	    } else {
+	        x.innerHTML = "Geolocation is not supported by this browser.";
+	    }
+	}
+	function showPosition(position) {
+	    x.innerHTML = "Latitude: " + position.coords.latitude +
+	    "<br>Longitude: " + position.coords.longitude;
+	}
+	</script>
+
+
+
+	<script>
+var d = new Date();
+document.getElementById("demo").innerHTML = d.getTime();
+</script>
+
+</html>
